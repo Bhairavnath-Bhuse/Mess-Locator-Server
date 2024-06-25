@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 // Import the required controllers and middleware functions
-const { login, signUp, sendOTP, changePassword} = require("../controllers/userController")
+const { login, signUp, sendOTP, changePassword} = require("../controllers/UserController")
 const { resetPasswordToken,  resetPassword,} = require("../controllers/resetPassword")
 const { auth } = require("../middleware/auth")
 

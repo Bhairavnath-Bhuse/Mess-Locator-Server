@@ -82,39 +82,39 @@ const createRating = async (req, res) => {
 
 
 //getAverageRating
-const getAverageRating = async (req, res) => {
-    try {
-            const Id = req.body.foodId;                             //get course ID
+// const getAverageRating = async (req, res) => {
+//     try {
+//             const Id = req.body.foodId;                             //get course ID
             
-            const result = await RatingAndReview.aggregate([
-                {
-                    $match:{mess: new mongoose.Types.ObjectId(Id),},        // it find all entry in which id of courses is matched with courseId in RatingAndReview models;
-                },
-                {
-                    $group:{ _id:null,  averageRating: { $avg: "$rating"},}         //all entry grouped into single grouped due to (_id:null) and then find averageRating;
-                }
-            ])
+//             const result = await RatingAndReview.aggregate([
+//                 {
+//                     $match:{mess: new mongoose.Types.ObjectId(Id),},        // it find all entry in which id of courses is matched with courseId in RatingAndReview models;
+//                 },
+//                 {
+//                     $group:{ _id:null,  averageRating: { $avg: "$rating"},}         //all entry grouped into single grouped due to (_id:null) and then find averageRating;
+//                 }
+//             ])
 
-            if(result.length > 0){                                                   //return rating
-                return res.status(200).json({
-                    success:true,
-                    averageRating: result[0].averageRating,
-                })}
+//             if(result.length > 0){                                                   //return rating
+//                 return res.status(200).json({
+//                     success:true,
+//                     averageRating: result[0].averageRating,
+//                 })}
  
-            return res.status(200).json({                                          //if no rating/Review exist
-                success:true,
-                message:'Average Rating is 0, no ratings given till now',
-                averageRating:0,
-            })
-    }
-    catch(error) {
-        console.log(error);
-        return res.status(500).json({
-            success:false,
-            message:error.message,
-        })
-    }
-}
+//             return res.status(200).json({                                          //if no rating/Review exist
+//                 success:true,
+//                 message:'Average Rating is 0, no ratings given till now',
+//                 averageRating:0,
+//             })
+//     }
+//     catch(error) {
+//         console.log(error);
+//         return res.status(500).json({
+//             success:false,
+//             message:error.message,
+//         })
+//     }
+// }
 
 
 // get the comment

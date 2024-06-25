@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const Mess = require("../models/Mess");
-const Location = require("../models/Location")
+// const Location = require("../models/Location")
 const { uploadImageToCloudinary } = require("../utils/imageUploader")
 
 // Function to create a new Mess

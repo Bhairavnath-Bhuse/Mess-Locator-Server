@@ -5,7 +5,7 @@ const router = express.Router()
 // Routes for deleteprofile , updateprofile , updateDisplayPicture;
 
 
-const { auth, isClient, isMessOwner } = require("../middleware/auth")
+const { auth, isMessOwner } = require("../middleware/auth")
 const { updateProfile, updateDisplayPicture,getAllUserDetails} = require("../controllers/Profile")
 const {getOwnerMessFoodPost,updateFoodPost,deleteFoodPost} = require("../controllers/Mess")
 // const {getAverageRating } = require("../controllers/RatingAndReview")

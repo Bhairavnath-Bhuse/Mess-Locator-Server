@@ -5,7 +5,7 @@ const router = express.Router()
 const {createFoodPost,getAllFoodPost,updateFoodPost,deleteFoodPost,getFoodPost} = require("../controllers/Mess")               // Course Controllers Import
 const { foodCategory } = require("../controllers/Category")      // Categories Controllers Import
 const {createRating,  getAverageRating,getReviews,} = require("../controllers/RatingAndReview")        // Rating Controllers Import
-const { auth, isClient, isMessOwner } = require("../middleware/auth")
+const { auth, isMessOwner } = require("../middleware/auth")
 
 
 
