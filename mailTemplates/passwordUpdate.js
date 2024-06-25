@@ -55,7 +55,7 @@ exports.passwordUpdated = (email, name) => {
     
     <body>
         <div class="container">
-            <a href=" "><img class="logo"
+            <a href="https://mess-locator-frontend.vercel.app/"><img class="logo"
                     src="https://res.cloudinary.com/dodfjstxd/image/upload/v1719204882/MessFinder/v4usad6mkidxvrqeg9lf.png" alt="StudyNotion Logo"></a>
             <div class="message">Password Update Confirmation</div>
             <div class="body">
