@@ -41,7 +41,7 @@ exports.sendOTP = async (req, res) =>  {
 
         //create an entry in OTP in DB and this OTP is used in SignUp to find response;
         const otpBody = await OTP.create(otpPayload);
-        console.log("OTP Body", otpBody);
+        // console.log("OTP Body", otpBody);
 
         res.status(200).json({                                     //return response successful
             success:true,
@@ -250,7 +250,7 @@ exports.changePassword = async (req, res) => {
 		 
 		try {                                                          // Send notification email , here passwordUpdated is template of email which is send to user;
 			const emailResponse = await mailSender(updatedUserDetails.email, passwordUpdate(updatedUserDetails.email, `Password updated successfully for ${updatedUserDetails.firstName} ${updatedUserDetails.lastName}`));
-			console.log("Email sent successfully:", emailResponse.response);
+			// console.log("Email sent successfully:", emailResponse.response);
 		   } 
         catch(error) {
 			return res.status(500).json({

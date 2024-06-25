@@ -156,7 +156,7 @@ exports.getAllFoodPost = async (req, res) => {
     try {
       
       const {ownerId} = req.query;                  // Get the owner ID from the authenticated user or request body
-      console.log("owner id is",ownerId)
+      // console.log("owner id is",ownerId)
 
 
       // Find all foods belonging to the owner

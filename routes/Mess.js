@@ -20,11 +20,7 @@ router.post("/createFoodPost",auth,isMessOwner,createFoodPost)
 router.get("/getFoodPost",getFoodPost)
 router.get("/foodCategory",foodCategory)
 
-// router.post("/getFullCourseDetails", auth, getFullCourseDetails)
-// router.post("/editCourse", auth, isInstructor, editCourse)                              // Edit Course routes
-// router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses)           // Get all Courses Under a Specific Instructor
-// router.delete("/deleteCourse", deleteCourse)                                            // Delete a Course
-// router.post("/updateCourseProgress", auth, isStudent, updateCourseProgress);
+
 
 
 
