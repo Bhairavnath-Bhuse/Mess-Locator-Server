@@ -194,4 +194,4 @@ const getReviews = async (req, res) => {
 
 
 
-module.exports =  {createRating , getAverageRating,getReviews};
+module.exports =  {createRating ,getReviews};
