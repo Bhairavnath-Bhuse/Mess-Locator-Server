@@ -19,10 +19,13 @@ exports.updateProfile = async (req, res) => {
     // await user.save()
 
     // Update the profile fields
+    userDetails.firstName = firstName
+    userDetails.lastName = lastName
     profile.contactNumber = contactNumber
     profile.about = about
     profile.location = location
 
+    await userDetails.save()
     await profile.save()                                     // Save the updated profile
 
     // Find the updated user details
